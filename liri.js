@@ -128,12 +128,8 @@ function liriLogic (command, choice){
 		    if (error) {
 		      return console.log(error);
 		    }
-
-		    // This will help us debug and see what is in the file 
-		    console.log(data);
-
-		    // Create an array to hold the commands 
-		    var commands = JSON.stringify(data);
+		    //splits the data into an array
+		    var commands = data.split(",");
 
 		    // Recursive function that exectutes what's in the file 
 		    liriLogic(commands[0], commands[1]);
